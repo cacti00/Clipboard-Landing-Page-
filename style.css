@@ -1,0 +1,380 @@
+:root {
+    --primary-cyan:  hsl(171, 66%, 44%);
+    --primary-dark-cyan:  hsl(170, 66%, 22%);
+    --primary-light-blue: hsl(233, 100%, 69%);
+    --primary-lighter-blue:  hsl(233, 81%, 79%);
+
+    --neutral-dark-grayish-blue: hsl(210, 10%, 33%);
+    --neutral-grayish-blue: hsl(201, 11%, 66%);
+
+    --neutral-light-gray:  hsl(204, 63%, 97%);
+
+    --fs-primary: 1.125rem;
+
+    --fw-primary: 400;
+    --fw-bold: 500;
+    --fw-bolder: 600;
+
+    --ff-family:  'Bai Jamjuree', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+ @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  } 
+}
+
+html {
+    font-size: var(--fs-primary);
+    font-family: var(--ff-family);
+    font-weight: var(--fw-primary);
+}
+
+
+body {
+    background-image: url(images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;  
+}
+
+.wrapper {
+    padding: 2em;
+}
+
+.text-center {
+    text-align:center
+}
+
+
+.description {
+    color: var(--neutral-grayish-blue);
+}
+
+.text-dark {
+    color: var(--neutral-dark-grayish-blue);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-top: 2em; 
+}
+
+
+.links__ios:hover,
+.links__mac:hover {
+    opacity: 0.8;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links__ios {
+    background-color: var(--primary-cyan);
+}
+
+.links__mac {
+    background-color: var(--primary-light-blue);
+}
+
+.links__ios,
+.links__mac {
+    color: white;
+    border-radius: 2em;
+    padding: 0.8em;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.header-logo,
+.workflow-img,
+.companies-img,
+.footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.snippets-section {
+    margin-top: 7em;
+}
+
+.snippets-header {
+    margin-bottom: 4em;
+}
+
+.split-2{
+    display: grid;
+}
+
+.computer-image-container {
+    margin-bottom: 3em;
+}
+
+.snippets-content-container {
+    display: grid;
+    gap: 2em;
+}
+
+
+.clipboard-entry-section{
+    margin-top: 7em;
+    display: grid;
+    gap: 3em;
+}
+
+.workflow-header {
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+}
+
+.workflow-infor{
+    display: grid;
+    gap: 5em;
+}
+
+
+.companies-section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.companies-list {
+    display: grid;
+    gap: 3em;
+}
+
+.availability {
+    margin-bottom: 5em;
+}
+
+.availability-intro {
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    background-color: var(--neutral-light-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 2em;
+}
+
+.footer-logo {
+    width: 3em;
+}
+
+
+.contact-information-list {
+    display: grid;
+    gap: 2em;
+}
+
+
+.contact-information-list a {
+    color: var(--neutral-dark-grayish-blue);
+    text-decoration: none;
+}
+
+.contact-information-list a:hover {
+    color: var(--primary-cyan);
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.social-links a {
+    color: var(--neutral-dark-grayish-blue);  
+}
+
+.social-links a:hover {
+    color: var(--primary-cyan); 
+}
+
+
+
+
+
+@media (min-width:56.25em) {
+
+    body {
+        background-image: url(images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;  
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+    .description {
+        margin: 0 auto;
+        max-width: 35em;
+    }
+
+    .links {
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .links__ios,
+    .links__mac {
+        padding: 1em 2em;
+        }
+
+    .clipboard-header {
+        padding-top: 5em;
+    }
+
+    .snippets-content-container {
+        padding: 5em;
+        text-align: start;
+    }
+
+    .accessible-device-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .split-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workflow-section,
+    .companies-section {
+        padding: 0 5em;
+    }
+
+    .workflow-infor{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .companies-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .contact-information-list {
+       grid-template-columns: repeat(3, 1fr);
+       margin-right: 10em;
+       text-align: start;
+       gap: 1em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
